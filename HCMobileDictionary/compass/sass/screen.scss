@@ -1,0 +1,136 @@
+/* HCMobileDictionary */
+@import "compass/reset";
+@import 'compass/utilities';
+
+$serif: "Times New Roman", Times, serif;
+$sans-serif: "Arial Unicode MS", Arial, Helvetica, "sans-serif";
+
+body {
+	font: $sans-serif;
+}
+
+#definition {
+	position: relative;
+//	top: 37px;
+	padding-bottom: 37px;
+	color: #505050;
+	& > div {
+		@include clearfix;
+		&:last-child {
+			margin-bottom: 10px;
+		}
+	}
+	h1, h2, h3, h4 {
+		color: #194480;
+	}
+	h2 {
+		background: #F4F6FA;
+		border-top: 1px dotted #c5c5c5;
+		border-bottom: 1px dotted #c5c5c5;
+		padding: 10px;
+		font-size: 36px;
+		font-weight: lighter;
+		font-family: $serif;
+		line-height: 1.5;
+		position: relative;
+		margin: 10px 0;
+		.pron {
+			font-size: 60%;
+		}
+		sup.homnum {
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 1.5;
+			font-size: 30%;
+			background: #194480;
+			padding: 2px 7px;
+			color: #fff;
+			font-family: $sans-serif;
+		}
+	}
+	h3, h4 {
+		font-family: $serif;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	h4.gramGrp {
+		margin-bottom: 15px;
+		color: #194885;
+		font-style: normal;
+	}
+	.gramGrp {
+		font-family: $serif;
+		font-style: italic;
+	}
+	.pron {
+		font-family: $sans-serif;
+	}
+	.pron, .hwd_sound {
+		margin-left: 10px;
+	}
+	p {
+		padding: 10px;
+	}
+	p.phrase {
+		padding: 0;
+	}
+	.hom-subsec {
+		padding: 0 10px;
+		&.re, &.etym {
+			border-top: 1px dotted #c5c5c5;
+			padding: 10px;
+		}
+	}
+	.hom {
+		ol {
+			list-style: decimal;
+			margin-left: 30px;
+		}
+		li {
+			margin-bottom: 15px;
+		}
+	}
+	.sense_list .lbl {
+		color: #7A5352;
+	}
+	.lbl, .xr_lbl, .subj, .sense, .mod, .geo, .misc, .register, .gram, .subc {
+//		color: #505050;
+		font-family: $serif;
+		font-style: italic;
+		font-weight: normal;
+	}
+	.drv {
+//		color: #505050;
+		font-weight: bold;
+	}
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+.var {
+    color: #194885;
+    font-weight: bold;
+}
+
+span {
+	line-height: 1.5;
+	top: 1.3em;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: #1c4b8b;
+}
+

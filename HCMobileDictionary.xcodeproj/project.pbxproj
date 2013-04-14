@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3253B1B9171355FE005D7B0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3253B1B8171355FE005D7B0A /* AVFoundation.framework */; };
+		3253B1BB17141A76005D7B0A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3253B1BA17141A76005D7B0A /* CoreMedia.framework */; };
+		3253B1BE17146631005D7B0A /* WOTDScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 3253B1BD17146631005D7B0A /* WOTDScroller.m */; };
+		326CEEB716E906060069B887 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEB616E906060069B887 /* UIKit.framework */; };
+		326CEEB916E906060069B887 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEB816E906060069B887 /* Foundation.framework */; };
+		326CEEBB16E906060069B887 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEBA16E906060069B887 /* CoreGraphics.framework */; };
+		326CEEBD16E906060069B887 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEBC16E906060069B887 /* CoreData.framework */; };
+		326CEEC316E906060069B887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEC116E906060069B887 /* InfoPlist.strings */; };
+		326CEEC516E906060069B887 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEC416E906060069B887 /* main.m */; };
+		326CEEC916E906060069B887 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEC816E906060069B887 /* AppDelegate.m */; };
+		326CEECB16E906060069B887 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECA16E906060069B887 /* Default.png */; };
+		326CEECD16E906060069B887 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECC16E906060069B887 /* Default@2x.png */; };
+		326CEECF16E906060069B887 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECE16E906060069B887 /* Default-568h@2x.png */; };
+		326CEED216E906060069B887 /* HCMobileDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */; };
+		326CEEDA16E906060069B887 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEED916E906060069B887 /* SenTestingKit.framework */; };
+		326CEEDB16E906060069B887 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEB616E906060069B887 /* UIKit.framework */; };
+		326CEEDC16E906060069B887 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEB816E906060069B887 /* Foundation.framework */; };
+		326CEEDD16E906060069B887 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEEBC16E906060069B887 /* CoreData.framework */; };
+		326CEEE516E906060069B887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEE316E906060069B887 /* InfoPlist.strings */; };
+		326CEEE816E906060069B887 /* HCMobileDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEE716E906060069B887 /* HCMobileDictionaryTests.m */; };
+		326CEEF216E9061F0069B887 /* MobileDictionary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF116E9061F0069B887 /* MobileDictionary.storyboard */; };
+		326CEEF516EF940F0069B887 /* DefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEF416EF940F0069B887 /* DefinitionViewController.m */; };
+		326CEEFB16EF96490069B887 /* definition.html.tpl in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF716EF96490069B887 /* definition.html.tpl */; };
+		326CEEFC16EF96490069B887 /* javascripts in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF816EF96490069B887 /* javascripts */; };
+		326CEEFD16EF96490069B887 /* redspeaker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF916EF96490069B887 /* redspeaker.gif */; };
+		326CEF0316F1F6E90069B887 /* WordsOfTheDayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */; };
+		32999B071716E0C300A8D055 /* HCContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32999B061716E0C300A8D055 /* HCContainer.m */; };
+		32999B0A1717036400A8D055 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32999B091717036400A8D055 /* SearchController.m */; };
+		32999B0C17171D7F00A8D055 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0B17171D7F00A8D055 /* logo.png */; };
+		32999B0E17171DC300A8D055 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0D17171DC300A8D055 /* logo.png */; };
+		32999B1017171E1100A8D055 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0F17171E1100A8D055 /* logo@2x.png */; };
+		32999B1217171E1700A8D055 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1117171E1700A8D055 /* logo@2x.png */; };
+		32999B1417171FEA00A8D055 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1317171FEA00A8D055 /* Default.png */; };
+		32999B1617171FF500A8D055 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1517171FF500A8D055 /* Default@2x.png */; };
+		32B49C46170B01E9009733FC /* Scrollers.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B49C45170B01E9009733FC /* Scrollers.m */; };
+		32B49C48170C2715009733FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B49C47170C2715009733FC /* QuartzCore.framework */; };
+		32B49C4B170C39EB009733FC /* PaddedUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B49C4A170C39EB009733FC /* PaddedUILabel.m */; };
+		32B49C4D170C4F10009733FC /* section_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 32B49C4C170C4F10009733FC /* section_bg.png */; };
+		32B49C50170C54D5009733FC /* UIColor_Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B49C4F170C54D5009733FC /* UIColor_Categories.m */; };
+		32B49C53170C67A9009733FC /* ObjectScrollers.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B49C52170C67A9009733FC /* ObjectScrollers.m */; };
+		32DB8EDC16FB304F00135330 /* stylesheets in Resources */ = {isa = PBXBuildFile; fileRef = 32DB8EDB16FB304F00135330 /* stylesheets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		326CEEDE16E906060069B887 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 326CEEAB16E906060069B887 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 326CEEB216E906060069B887;
+			remoteInfo = HCMobileDictionary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3253B1B6170F3D88005D7B0A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3253B1B8171355FE005D7B0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3253B1BA17141A76005D7B0A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3253B1BC17146631005D7B0A /* WOTDScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOTDScroller.h; sourceTree = "<group>"; };
+		3253B1BD17146631005D7B0A /* WOTDScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOTDScroller.m; sourceTree = "<group>"; };
+		326CEEB316E906060069B887 /* HCMobileDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCMobileDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		326CEEB616E906060069B887 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		326CEEB816E906060069B887 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		326CEEBA16E906060069B887 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		326CEEBC16E906060069B887 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		326CEEC016E906060069B887 /* HCMobileDictionary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HCMobileDictionary-Info.plist"; sourceTree = "<group>"; };
+		326CEEC216E906060069B887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		326CEEC416E906060069B887 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		326CEEC616E906060069B887 /* HCMobileDictionary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HCMobileDictionary-Prefix.pch"; sourceTree = "<group>"; };
+		326CEEC716E906060069B887 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		326CEEC816E906060069B887 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		326CEECA16E906060069B887 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		326CEECC16E906060069B887 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		326CEECE16E906060069B887 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		326CEED116E906060069B887 /* HCMobileDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HCMobileDictionary.xcdatamodel; sourceTree = "<group>"; };
+		326CEED816E906060069B887 /* HCMobileDictionaryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCMobileDictionaryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		326CEED916E906060069B887 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		326CEEE216E906060069B887 /* HCMobileDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HCMobileDictionaryTests-Info.plist"; sourceTree = "<group>"; };
+		326CEEE416E906060069B887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		326CEEE616E906060069B887 /* HCMobileDictionaryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMobileDictionaryTests.h; sourceTree = "<group>"; };
+		326CEEE716E906060069B887 /* HCMobileDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMobileDictionaryTests.m; sourceTree = "<group>"; };
+		326CEEF116E9061F0069B887 /* MobileDictionary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileDictionary.storyboard; sourceTree = "<group>"; };
+		326CEEF316EF940F0069B887 /* DefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefinitionViewController.h; path = ../../EmptyTest/EmptyTest/DefinitionViewController.h; sourceTree = "<group>"; };
+		326CEEF416EF940F0069B887 /* DefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefinitionViewController.m; path = ../../EmptyTest/EmptyTest/DefinitionViewController.m; sourceTree = "<group>"; };
+		326CEEF716EF96490069B887 /* definition.html.tpl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = definition.html.tpl; path = ../../EmptyTest/EmptyTest/definition.html.tpl; sourceTree = "<group>"; };
+		326CEEF816EF96490069B887 /* javascripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = javascripts; path = ../../EmptyTest/EmptyTest/javascripts; sourceTree = "<group>"; };
+		326CEEF916EF96490069B887 /* redspeaker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = redspeaker.gif; path = ../../EmptyTest/EmptyTest/redspeaker.gif; sourceTree = "<group>"; };
+		326CEF0116F1F6E90069B887 /* WordsOfTheDayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsOfTheDayController.h; sourceTree = "<group>"; };
+		326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsOfTheDayController.m; sourceTree = "<group>"; };
+		32999B051716E0C300A8D055 /* HCContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCContainer.h; sourceTree = "<group>"; };
+		32999B061716E0C300A8D055 /* HCContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCContainer.m; sourceTree = "<group>"; };
+		32999B081717036400A8D055 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		32999B091717036400A8D055 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
+		32999B0B17171D7F00A8D055 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		32999B0D17171DC300A8D055 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		32999B0F17171E1100A8D055 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		32999B1117171E1700A8D055 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		32999B1317171FEA00A8D055 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		32999B1517171FF500A8D055 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		32B49C44170B01E9009733FC /* Scrollers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scrollers.h; path = ../Scrollers.h; sourceTree = "<group>"; };
+		32B49C45170B01E9009733FC /* Scrollers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scrollers.m; path = ../Scrollers.m; sourceTree = "<group>"; };
+		32B49C47170C2715009733FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32B49C49170C39EB009733FC /* PaddedUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddedUILabel.h; sourceTree = "<group>"; };
+		32B49C4A170C39EB009733FC /* PaddedUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddedUILabel.m; sourceTree = "<group>"; };
+		32B49C4C170C4F10009733FC /* section_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_bg.png; sourceTree = "<group>"; };
+		32B49C4E170C54D5009733FC /* UIColor_Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_Categories.h; sourceTree = "<group>"; };
+		32B49C4F170C54D5009733FC /* UIColor_Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_Categories.m; sourceTree = "<group>"; };
+		32B49C51170C67A9009733FC /* ObjectScrollers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectScrollers.h; sourceTree = "<group>"; };
+		32B49C52170C67A9009733FC /* ObjectScrollers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectScrollers.m; sourceTree = "<group>"; };
+		32DB8EDB16FB304F00135330 /* stylesheets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = stylesheets; path = compass/stylesheets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		326CEEB016E906060069B887 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3253B1BB17141A76005D7B0A /* CoreMedia.framework in Frameworks */,
+				3253B1B9171355FE005D7B0A /* AVFoundation.framework in Frameworks */,
+				32B49C48170C2715009733FC /* QuartzCore.framework in Frameworks */,
+				326CEEB716E906060069B887 /* UIKit.framework in Frameworks */,
+				326CEEB916E906060069B887 /* Foundation.framework in Frameworks */,
+				326CEEBB16E906060069B887 /* CoreGraphics.framework in Frameworks */,
+				326CEEBD16E906060069B887 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326CEED416E906060069B887 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CEEDA16E906060069B887 /* SenTestingKit.framework in Frameworks */,
+				326CEEDB16E906060069B887 /* UIKit.framework in Frameworks */,
+				326CEEDC16E906060069B887 /* Foundation.framework in Frameworks */,
+				326CEEDD16E906060069B887 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		326CEEAA16E906060069B887 = {
+			isa = PBXGroup;
+			children = (
+				32999B1517171FF500A8D055 /* Default@2x.png */,
+				32999B1317171FEA00A8D055 /* Default.png */,
+				32999B1117171E1700A8D055 /* logo@2x.png */,
+				32999B0D17171DC300A8D055 /* logo.png */,
+				3253B1BA17141A76005D7B0A /* CoreMedia.framework */,
+				3253B1B8171355FE005D7B0A /* AVFoundation.framework */,
+				3253B1B6170F3D88005D7B0A /* AudioToolbox.framework */,
+				32B49C47170C2715009733FC /* QuartzCore.framework */,
+				326CEEBE16E906060069B887 /* HCMobileDictionary */,
+				326CEEE016E906060069B887 /* HCMobileDictionaryTests */,
+				326CEEB516E906060069B887 /* Frameworks */,
+				326CEEB416E906060069B887 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		326CEEB416E906060069B887 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				326CEEB316E906060069B887 /* HCMobileDictionary.app */,
+				326CEED816E906060069B887 /* HCMobileDictionaryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		326CEEB516E906060069B887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				326CEEB616E906060069B887 /* UIKit.framework */,
+				326CEEB816E906060069B887 /* Foundation.framework */,
+				326CEEBA16E906060069B887 /* CoreGraphics.framework */,
+				326CEEBC16E906060069B887 /* CoreData.framework */,
+				326CEED916E906060069B887 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		326CEEBE16E906060069B887 /* HCMobileDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				32B49C44170B01E9009733FC /* Scrollers.h */,
+				32B49C45170B01E9009733FC /* Scrollers.m */,
+				32999B051716E0C300A8D055 /* HCContainer.h */,
+				32999B061716E0C300A8D055 /* HCContainer.m */,
+				32B49C51170C67A9009733FC /* ObjectScrollers.h */,
+				32B49C52170C67A9009733FC /* ObjectScrollers.m */,
+				32999B0B17171D7F00A8D055 /* logo.png */,
+				326CEEF716EF96490069B887 /* definition.html.tpl */,
+				326CEEF816EF96490069B887 /* javascripts */,
+				326CEEF916EF96490069B887 /* redspeaker.gif */,
+				32DB8EDB16FB304F00135330 /* stylesheets */,
+				326CEEC716E906060069B887 /* AppDelegate.h */,
+				326CEEC816E906060069B887 /* AppDelegate.m */,
+				32999B0F17171E1100A8D055 /* logo@2x.png */,
+				32B49C4C170C4F10009733FC /* section_bg.png */,
+				326CEEF316EF940F0069B887 /* DefinitionViewController.h */,
+				326CEEF416EF940F0069B887 /* DefinitionViewController.m */,
+				32999B081717036400A8D055 /* SearchController.h */,
+				32999B091717036400A8D055 /* SearchController.m */,
+				326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */,
+				326CEEBF16E906060069B887 /* Supporting Files */,
+				326CEEF116E9061F0069B887 /* MobileDictionary.storyboard */,
+				326CEF0116F1F6E90069B887 /* WordsOfTheDayController.h */,
+				326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */,
+				3253B1BC17146631005D7B0A /* WOTDScroller.h */,
+				3253B1BD17146631005D7B0A /* WOTDScroller.m */,
+				32B49C49170C39EB009733FC /* PaddedUILabel.h */,
+				32B49C4A170C39EB009733FC /* PaddedUILabel.m */,
+				32B49C4E170C54D5009733FC /* UIColor_Categories.h */,
+				32B49C4F170C54D5009733FC /* UIColor_Categories.m */,
+			);
+			path = HCMobileDictionary;
+			sourceTree = "<group>";
+		};
+		326CEEBF16E906060069B887 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				326CEEC016E906060069B887 /* HCMobileDictionary-Info.plist */,
+				326CEEC116E906060069B887 /* InfoPlist.strings */,
+				326CEEC416E906060069B887 /* main.m */,
+				326CEEC616E906060069B887 /* HCMobileDictionary-Prefix.pch */,
+				326CEECA16E906060069B887 /* Default.png */,
+				326CEECC16E906060069B887 /* Default@2x.png */,
+				326CEECE16E906060069B887 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		326CEEE016E906060069B887 /* HCMobileDictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				326CEEE616E906060069B887 /* HCMobileDictionaryTests.h */,
+				326CEEE716E906060069B887 /* HCMobileDictionaryTests.m */,
+				326CEEE116E906060069B887 /* Supporting Files */,
+			);
+			path = HCMobileDictionaryTests;
+			sourceTree = "<group>";
+		};
+		326CEEE116E906060069B887 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				326CEEE216E906060069B887 /* HCMobileDictionaryTests-Info.plist */,
+				326CEEE316E906060069B887 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		326CEEB216E906060069B887 /* HCMobileDictionary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326CEEEB16E906060069B887 /* Build configuration list for PBXNativeTarget "HCMobileDictionary" */;
+			buildPhases = (
+				326CEF0016EF97560069B887 /* ShellScript */,
+				326CEEAF16E906060069B887 /* Sources */,
+				326CEEB016E906060069B887 /* Frameworks */,
+				326CEEB116E906060069B887 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCMobileDictionary;
+			productName = HCMobileDictionary;
+			productReference = 326CEEB316E906060069B887 /* HCMobileDictionary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		326CEED716E906060069B887 /* HCMobileDictionaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 326CEEEE16E906060069B887 /* Build configuration list for PBXNativeTarget "HCMobileDictionaryTests" */;
+			buildPhases = (
+				326CEED316E906060069B887 /* Sources */,
+				326CEED416E906060069B887 /* Frameworks */,
+				326CEED516E906060069B887 /* Resources */,
+				326CEED616E906060069B887 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				326CEEDF16E906060069B887 /* PBXTargetDependency */,
+			);
+			name = HCMobileDictionaryTests;
+			productName = HCMobileDictionaryTests;
+			productReference = 326CEED816E906060069B887 /* HCMobileDictionaryTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		326CEEAB16E906060069B887 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.othermedia;
+			};
+			buildConfigurationList = 326CEEAE16E906060069B887 /* Build configuration list for PBXProject "HCMobileDictionary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 326CEEAA16E906060069B887;
+			productRefGroup = 326CEEB416E906060069B887 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				326CEEB216E906060069B887 /* HCMobileDictionary */,
+				326CEED716E906060069B887 /* HCMobileDictionaryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		326CEEB116E906060069B887 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CEEC316E906060069B887 /* InfoPlist.strings in Resources */,
+				326CEECB16E906060069B887 /* Default.png in Resources */,
+				326CEECD16E906060069B887 /* Default@2x.png in Resources */,
+				326CEECF16E906060069B887 /* Default-568h@2x.png in Resources */,
+				326CEEF216E9061F0069B887 /* MobileDictionary.storyboard in Resources */,
+				326CEEFB16EF96490069B887 /* definition.html.tpl in Resources */,
+				326CEEFC16EF96490069B887 /* javascripts in Resources */,
+				326CEEFD16EF96490069B887 /* redspeaker.gif in Resources */,
+				32DB8EDC16FB304F00135330 /* stylesheets in Resources */,
+				32B49C4D170C4F10009733FC /* section_bg.png in Resources */,
+				32999B0C17171D7F00A8D055 /* logo.png in Resources */,
+				32999B0E17171DC300A8D055 /* logo.png in Resources */,
+				32999B1017171E1100A8D055 /* logo@2x.png in Resources */,
+				32999B1217171E1700A8D055 /* logo@2x.png in Resources */,
+				32999B1417171FEA00A8D055 /* Default.png in Resources */,
+				32999B1617171FF500A8D055 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326CEED516E906060069B887 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CEEE516E906060069B887 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		326CEED616E906060069B887 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		326CEF0016EF97560069B887 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/bash -login -c \" compass compile $PROJECT_DIR/HCMobileDictionary/compass \"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		326CEEAF16E906060069B887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CEEC516E906060069B887 /* main.m in Sources */,
+				326CEEC916E906060069B887 /* AppDelegate.m in Sources */,
+				326CEED216E906060069B887 /* HCMobileDictionary.xcdatamodeld in Sources */,
+				326CEEF516EF940F0069B887 /* DefinitionViewController.m in Sources */,
+				326CEF0316F1F6E90069B887 /* WordsOfTheDayController.m in Sources */,
+				32B49C46170B01E9009733FC /* Scrollers.m in Sources */,
+				32B49C4B170C39EB009733FC /* PaddedUILabel.m in Sources */,
+				32B49C50170C54D5009733FC /* UIColor_Categories.m in Sources */,
+				32B49C53170C67A9009733FC /* ObjectScrollers.m in Sources */,
+				3253B1BE17146631005D7B0A /* WOTDScroller.m in Sources */,
+				32999B071716E0C300A8D055 /* HCContainer.m in Sources */,
+				32999B0A1717036400A8D055 /* SearchController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326CEED316E906060069B887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CEEE816E906060069B887 /* HCMobileDictionaryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		326CEEDF16E906060069B887 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 326CEEB216E906060069B887 /* HCMobileDictionary */;
+			targetProxy = 326CEEDE16E906060069B887 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		326CEEC116E906060069B887 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326CEEC216E906060069B887 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		326CEEE316E906060069B887 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				326CEEE416E906060069B887 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		326CEEE916E906060069B887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		326CEEEA16E906060069B887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		326CEEEC16E906060069B887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCMobileDictionary/HCMobileDictionary-Prefix.pch";
+				INFOPLIST_FILE = "HCMobileDictionary/HCMobileDictionary-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		326CEEED16E906060069B887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCMobileDictionary/HCMobileDictionary-Prefix.pch";
+				INFOPLIST_FILE = "HCMobileDictionary/HCMobileDictionary-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		326CEEEF16E906060069B887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HCMobileDictionary.app/HCMobileDictionary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCMobileDictionary/HCMobileDictionary-Prefix.pch";
+				INFOPLIST_FILE = "HCMobileDictionaryTests/HCMobileDictionaryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		326CEEF016E906060069B887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HCMobileDictionary.app/HCMobileDictionary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCMobileDictionary/HCMobileDictionary-Prefix.pch";
+				INFOPLIST_FILE = "HCMobileDictionaryTests/HCMobileDictionaryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		326CEEAE16E906060069B887 /* Build configuration list for PBXProject "HCMobileDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326CEEE916E906060069B887 /* Debug */,
+				326CEEEA16E906060069B887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		326CEEEB16E906060069B887 /* Build configuration list for PBXNativeTarget "HCMobileDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326CEEEC16E906060069B887 /* Debug */,
+				326CEEED16E906060069B887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		326CEEEE16E906060069B887 /* Build configuration list for PBXNativeTarget "HCMobileDictionaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326CEEEF16E906060069B887 /* Debug */,
+				326CEEF016E906060069B887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				326CEED116E906060069B887 /* HCMobileDictionary.xcdatamodel */,
+			);
+			currentVersion = 326CEED116E906060069B887 /* HCMobileDictionary.xcdatamodel */;
+			path = HCMobileDictionary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 326CEEAB16E906060069B887 /* Project object */;
+}
