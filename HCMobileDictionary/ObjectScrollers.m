@@ -10,6 +10,7 @@
 #import "PaddedUILabel.h"
 #import "UIColor_Categories.h"
 #import <QuartzCore/QuartzCore.h>
+#import "HCTranslations.h"
 
 @implementation ObjectScrollers {
     UIScrollView *scroller;
@@ -35,20 +36,19 @@
     [scroller setContentSize:scrollViewContentSize];
     [scroller setShowsHorizontalScrollIndicator:NO];
     
-    NSArray *keysArray = [[NSArray alloc] initWithObjects:@"french", @"german", @"spanish", @"italian", nil];
-    NSDictionary *translationObj = [[NSDictionary alloc] initWithObjects:arrayData forKeys:keysArray];
+//    NSArray *keysArray = [[NSArray alloc] initWithObjects:@"french", @"german", @"spanish", @"italian", nil];
+//    NSDictionary *translationObj = [[NSDictionary alloc] initWithObjects:arrayData forKeys:keysArray];
     
     int i = 0;
     
-    for (id key in translationObj) {
-        NSDictionary *translation = [translationObj objectForKey:key];
+    for (HCTranslations *def in arrayData) {
         PaddedUILabel *translationLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * scroller.bounds.size.width + 5.0f, 0.0f, scroller.bounds.size.width - 10.0f, 100.0f)];
         translationLabel.backgroundColor = [UIColor whiteColor];
         translationLabel.numberOfLines = 0;
         translationLabel.layer.cornerRadius = 8;
         translationLabel.layer.borderColor = [UIColor colorWithHexString:@"#cccccc"].CGColor;
         translationLabel.layer.borderWidth = 2;
-        [translationLabel setText:translation[@"translation"]];
+        [translationLabel setText:def.translation];
         [translationLabel setFont:[UIFont fontWithName:@"Times" size:14.0]];
         [scroller addSubview:translationLabel];
         i++;

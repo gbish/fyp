@@ -10,6 +10,7 @@
 #import "PaddedUILabel.h"
 #import "UIColor_Categories.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DefinitionViewController.h"
 
 @implementation WOTDScroller
 
@@ -48,20 +49,30 @@
         [scroller addSubview:wrapper];
         
         PaddedUILabel *wordLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, wrapper.bounds.size.width, 60.0f)];
+        wordLabel.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadWord:)];
+        [wordLabel addGestureRecognizer:tapGesture];
+        
         wordLabel.numberOfLines = 0;
-        [wordLabel setText:[dict objectForKey:@"word"]];
+        [wordLabel setText:dict[@"word"]];
         [wordLabel setFont:[UIFont fontWithName:@"Times" size:36.0]];
         wordLabel.textColor = [UIColor whiteColor];
         wordLabel.backgroundColor = [UIColor clearColor];
         
         PaddedUILabel *defLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(0.0f, wordHeight, wrapper.bounds.size.width, defHeight)];
         defLabel.numberOfLines = 0;
-        [defLabel setText:[dict objectForKey:@"definition"]];
+        
+        // Check if the definition is not null (populated)
+        if ((NSNull *)dict[@"definition"] != [NSNull null]) {
+            [defLabel setText:dict[@"definition"]];
+        }
         [defLabel setFont:[UIFont fontWithName:@"Helvetica" size:18.0]];
         defLabel.textColor = [UIColor colorWithHexString:@"#ACD9F6"];
         defLabel.backgroundColor = [UIColor clearColor];
         
         [wrapper addSubview:wordLabel];
+        [wrapper bringSubviewToFront:wordLabel];
         [wrapper addSubview:defLabel];
         i++;
     }
@@ -79,6 +90,13 @@
     [self.pageControl addTarget:self action:@selector(pageChanged:) forControlEvents:UIControlEventValueChanged];
     
     [self addSubview:self.pageControl];
+}
+
+- (void)loadWord:(NSString *)word
+{
+    NSLog(@"Tapped on the label");
+    
+//    DefinitionViewController *defController = [[DefinitionViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 /*

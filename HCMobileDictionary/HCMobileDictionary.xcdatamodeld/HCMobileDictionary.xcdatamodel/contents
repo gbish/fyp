@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="HCNoun" representedClassName="HCNouns" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wordId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HCWord" inverseName="nouns" inverseEntity="HCWord" syncable="YES"/>
+    </entity>
+    <entity name="HCTranslation" representedClassName="HCTranslations" syncable="YES">
+        <attribute name="headword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="translation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wordId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HCWord" inverseName="translations" inverseEntity="HCWord" syncable="YES"/>
+    </entity>
+    <entity name="HCVerb" representedClassName="HCVerbs" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wordId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HCWord" inverseName="verbs" inverseEntity="HCWord" syncable="YES"/>
+    </entity>
+    <entity name="HCWord" representedClassName="HCWords" syncable="YES">
+        <attribute name="audio_path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audio_pronunciation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="word_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nouns" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HCNoun" inverseName="word" inverseEntity="HCNoun" syncable="YES"/>
+        <relationship name="translations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HCTranslation" inverseName="word" inverseEntity="HCTranslation" syncable="YES"/>
+        <relationship name="verbs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HCVerb" inverseName="word" inverseEntity="HCVerb" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="HCNoun" positionX="448" positionY="9" width="128" height="88"/>
+        <element name="HCTranslation" positionX="135" positionY="269" width="171" height="118"/>
+        <element name="HCVerb" positionX="-72" positionY="11" width="128" height="88"/>
+        <element name="HCWord" positionX="196" positionY="-9" width="128" height="148"/>
+    </elements>
 </model>

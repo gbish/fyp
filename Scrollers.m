@@ -10,6 +10,8 @@
 #import "PaddedUILabel.h"
 #import "UIColor_Categories.h"
 #import <QuartzCore/QuartzCore.h>
+#import "HCNouns.h"
+#import "HCVerbs.h"
 
 @interface Scrollers () {
     UIScrollView *scroller;
@@ -53,18 +55,39 @@
     [scroller setContentSize:scrollViewContentSize];
     [scroller setShowsHorizontalScrollIndicator:NO];
     
-    for (int i = 0; i < arrayData.count; i++) {
+    int i = 0;
+    
+    for (NSManagedObject *def in arrayData) {
         PaddedUILabel *definitionLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * scroller.bounds.size.width + 5.0f, 0.0f, scroller.bounds.size.width - 10.0f, 100.0f)];
         definitionLabel.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
         definitionLabel.numberOfLines = 0;
         definitionLabel.layer.cornerRadius = 8;
         definitionLabel.layer.borderColor = [UIColor colorWithHexString:@"#cccccc"].CGColor;
         definitionLabel.layer.borderWidth = 2;
-        [definitionLabel setText:arrayData[i]];
+        if ([def isKindOfClass:[HCNouns class]]) {
+            [definitionLabel setText:[(HCNouns *) def definition]];
+        } else {
+            [definitionLabel setText:[(HCVerbs *) def definition]];
+        }
         [definitionLabel setFont:[UIFont fontWithName:@"Times" size:14.0]];
         definitionLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         [scroller addSubview:definitionLabel];
+        i++;
     }
+    
+//    for (int i = 0; i < arrayData.count; i++) {
+//        PaddedUILabel *definitionLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * scroller.bounds.size.width + 5.0f, 0.0f, scroller.bounds.size.width - 10.0f, 100.0f)];
+//        definitionLabel.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
+//        definitionLabel.numberOfLines = 0;
+//        definitionLabel.layer.cornerRadius = 8;
+//        definitionLabel.layer.borderColor = [UIColor colorWithHexString:@"#cccccc"].CGColor;
+//        definitionLabel.layer.borderWidth = 2;
+//        [definitionLabel setText:arrayData[i]];
+//        [definitionLabel setFont:[UIFont fontWithName:@"Times" size:14.0]];
+//        definitionLabel.textColor = [UIColor colorWithHexString:@"#333333"];
+//        [scroller addSubview:definitionLabel];
+//        i++;
+//    }
     
     CGSize newScrollViewContentSize = CGSizeMake(scroller.bounds.size.width * arrayData.count, 100.0f);
     [scroller setContentSize:newScrollViewContentSize];

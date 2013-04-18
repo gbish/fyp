@@ -17,8 +17,6 @@
 		326CEEC316E906060069B887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEC116E906060069B887 /* InfoPlist.strings */; };
 		326CEEC516E906060069B887 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEC416E906060069B887 /* main.m */; };
 		326CEEC916E906060069B887 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEEC816E906060069B887 /* AppDelegate.m */; };
-		326CEECB16E906060069B887 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECA16E906060069B887 /* Default.png */; };
-		326CEECD16E906060069B887 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECC16E906060069B887 /* Default@2x.png */; };
 		326CEECF16E906060069B887 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 326CEECE16E906060069B887 /* Default-568h@2x.png */; };
 		326CEED216E906060069B887 /* HCMobileDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */; };
 		326CEEDA16E906060069B887 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CEED916E906060069B887 /* SenTestingKit.framework */; };
@@ -33,11 +31,13 @@
 		326CEEFC16EF96490069B887 /* javascripts in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF816EF96490069B887 /* javascripts */; };
 		326CEEFD16EF96490069B887 /* redspeaker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 326CEEF916EF96490069B887 /* redspeaker.gif */; };
 		326CEF0316F1F6E90069B887 /* WordsOfTheDayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */; };
+		3283860717200827007C3780 /* HCWords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3283860617200827007C3780 /* HCWords.m */; };
+		3283860D17200854007C3780 /* HCVerbs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3283860C17200854007C3780 /* HCVerbs.m */; };
+		3283861017200899007C3780 /* HCTranslations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3283860F17200899007C3780 /* HCTranslations.m */; };
+		32838613172008B3007C3780 /* HCNouns.m in Sources */ = {isa = PBXBuildFile; fileRef = 32838612172008B3007C3780 /* HCNouns.m */; };
 		32999B071716E0C300A8D055 /* HCContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32999B061716E0C300A8D055 /* HCContainer.m */; };
 		32999B0A1717036400A8D055 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32999B091717036400A8D055 /* SearchController.m */; };
-		32999B0C17171D7F00A8D055 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0B17171D7F00A8D055 /* logo.png */; };
 		32999B0E17171DC300A8D055 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0D17171DC300A8D055 /* logo.png */; };
-		32999B1017171E1100A8D055 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B0F17171E1100A8D055 /* logo@2x.png */; };
 		32999B1217171E1700A8D055 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1117171E1700A8D055 /* logo@2x.png */; };
 		32999B1417171FEA00A8D055 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1317171FEA00A8D055 /* Default.png */; };
 		32999B1617171FF500A8D055 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32999B1517171FF500A8D055 /* Default@2x.png */; };
@@ -95,6 +95,14 @@
 		326CEEF916EF96490069B887 /* redspeaker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = redspeaker.gif; path = ../../EmptyTest/EmptyTest/redspeaker.gif; sourceTree = "<group>"; };
 		326CEF0116F1F6E90069B887 /* WordsOfTheDayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsOfTheDayController.h; sourceTree = "<group>"; };
 		326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsOfTheDayController.m; sourceTree = "<group>"; };
+		3283860517200827007C3780 /* HCWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWords.h; sourceTree = "<group>"; };
+		3283860617200827007C3780 /* HCWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCWords.m; sourceTree = "<group>"; };
+		3283860B17200854007C3780 /* HCVerbs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCVerbs.h; sourceTree = "<group>"; };
+		3283860C17200854007C3780 /* HCVerbs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCVerbs.m; sourceTree = "<group>"; };
+		3283860E17200899007C3780 /* HCTranslations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTranslations.h; sourceTree = "<group>"; };
+		3283860F17200899007C3780 /* HCTranslations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTranslations.m; sourceTree = "<group>"; };
+		32838611172008B3007C3780 /* HCNouns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNouns.h; sourceTree = "<group>"; };
+		32838612172008B3007C3780 /* HCNouns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNouns.m; sourceTree = "<group>"; };
 		32999B051716E0C300A8D055 /* HCContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCContainer.h; sourceTree = "<group>"; };
 		32999B061716E0C300A8D055 /* HCContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCContainer.m; sourceTree = "<group>"; };
 		32999B081717036400A8D055 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
@@ -103,7 +111,7 @@
 		32999B0D17171DC300A8D055 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		32999B0F17171E1100A8D055 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		32999B1117171E1700A8D055 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		32999B1317171FEA00A8D055 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		32999B1317171FEA00A8D055 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		32999B1517171FF500A8D055 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		32B49C44170B01E9009733FC /* Scrollers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scrollers.h; path = ../Scrollers.h; sourceTree = "<group>"; };
 		32B49C45170B01E9009733FC /* Scrollers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scrollers.m; path = ../Scrollers.m; sourceTree = "<group>"; };
@@ -151,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				32999B1517171FF500A8D055 /* Default@2x.png */,
-				32999B1317171FEA00A8D055 /* Default.png */,
 				32999B1117171E1700A8D055 /* logo@2x.png */,
 				32999B0D17171DC300A8D055 /* logo.png */,
 				3253B1BA17141A76005D7B0A /* CoreMedia.framework */,
@@ -189,36 +196,45 @@
 		326CEEBE16E906060069B887 /* HCMobileDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				32B49C44170B01E9009733FC /* Scrollers.h */,
-				32B49C45170B01E9009733FC /* Scrollers.m */,
-				32999B051716E0C300A8D055 /* HCContainer.h */,
-				32999B061716E0C300A8D055 /* HCContainer.m */,
-				32B49C51170C67A9009733FC /* ObjectScrollers.h */,
-				32B49C52170C67A9009733FC /* ObjectScrollers.m */,
-				32999B0B17171D7F00A8D055 /* logo.png */,
-				326CEEF716EF96490069B887 /* definition.html.tpl */,
-				326CEEF816EF96490069B887 /* javascripts */,
-				326CEEF916EF96490069B887 /* redspeaker.gif */,
-				32DB8EDB16FB304F00135330 /* stylesheets */,
+				32838611172008B3007C3780 /* HCNouns.h */,
+				32838612172008B3007C3780 /* HCNouns.m */,
+				32999B1317171FEA00A8D055 /* Default.png */,
+				3283860E17200899007C3780 /* HCTranslations.h */,
+				3283860F17200899007C3780 /* HCTranslations.m */,
+				3283860B17200854007C3780 /* HCVerbs.h */,
+				3283860C17200854007C3780 /* HCVerbs.m */,
 				326CEEC716E906060069B887 /* AppDelegate.h */,
 				326CEEC816E906060069B887 /* AppDelegate.m */,
-				32999B0F17171E1100A8D055 /* logo@2x.png */,
-				32B49C4C170C4F10009733FC /* section_bg.png */,
+				326CEEF716EF96490069B887 /* definition.html.tpl */,
 				326CEEF316EF940F0069B887 /* DefinitionViewController.h */,
 				326CEEF416EF940F0069B887 /* DefinitionViewController.m */,
+				32999B051716E0C300A8D055 /* HCContainer.h */,
+				32999B061716E0C300A8D055 /* HCContainer.m */,
+				326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */,
+				3283860517200827007C3780 /* HCWords.h */,
+				3283860617200827007C3780 /* HCWords.m */,
+				326CEEF816EF96490069B887 /* javascripts */,
+				32999B0B17171D7F00A8D055 /* logo.png */,
+				32999B0F17171E1100A8D055 /* logo@2x.png */,
+				326CEEF116E9061F0069B887 /* MobileDictionary.storyboard */,
+				32B49C51170C67A9009733FC /* ObjectScrollers.h */,
+				32B49C52170C67A9009733FC /* ObjectScrollers.m */,
+				32B49C49170C39EB009733FC /* PaddedUILabel.h */,
+				32B49C4A170C39EB009733FC /* PaddedUILabel.m */,
+				326CEEF916EF96490069B887 /* redspeaker.gif */,
+				32B49C44170B01E9009733FC /* Scrollers.h */,
+				32B49C45170B01E9009733FC /* Scrollers.m */,
 				32999B081717036400A8D055 /* SearchController.h */,
 				32999B091717036400A8D055 /* SearchController.m */,
-				326CEED016E906060069B887 /* HCMobileDictionary.xcdatamodeld */,
+				32B49C4C170C4F10009733FC /* section_bg.png */,
+				32DB8EDB16FB304F00135330 /* stylesheets */,
 				326CEEBF16E906060069B887 /* Supporting Files */,
-				326CEEF116E9061F0069B887 /* MobileDictionary.storyboard */,
+				32B49C4E170C54D5009733FC /* UIColor_Categories.h */,
+				32B49C4F170C54D5009733FC /* UIColor_Categories.m */,
 				326CEF0116F1F6E90069B887 /* WordsOfTheDayController.h */,
 				326CEF0216F1F6E90069B887 /* WordsOfTheDayController.m */,
 				3253B1BC17146631005D7B0A /* WOTDScroller.h */,
 				3253B1BD17146631005D7B0A /* WOTDScroller.m */,
-				32B49C49170C39EB009733FC /* PaddedUILabel.h */,
-				32B49C4A170C39EB009733FC /* PaddedUILabel.m */,
-				32B49C4E170C54D5009733FC /* UIColor_Categories.h */,
-				32B49C4F170C54D5009733FC /* UIColor_Categories.m */,
 			);
 			path = HCMobileDictionary;
 			sourceTree = "<group>";
@@ -329,8 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				326CEEC316E906060069B887 /* InfoPlist.strings in Resources */,
-				326CEECB16E906060069B887 /* Default.png in Resources */,
-				326CEECD16E906060069B887 /* Default@2x.png in Resources */,
 				326CEECF16E906060069B887 /* Default-568h@2x.png in Resources */,
 				326CEEF216E9061F0069B887 /* MobileDictionary.storyboard in Resources */,
 				326CEEFB16EF96490069B887 /* definition.html.tpl in Resources */,
@@ -338,9 +352,7 @@
 				326CEEFD16EF96490069B887 /* redspeaker.gif in Resources */,
 				32DB8EDC16FB304F00135330 /* stylesheets in Resources */,
 				32B49C4D170C4F10009733FC /* section_bg.png in Resources */,
-				32999B0C17171D7F00A8D055 /* logo.png in Resources */,
 				32999B0E17171DC300A8D055 /* logo.png in Resources */,
-				32999B1017171E1100A8D055 /* logo@2x.png in Resources */,
 				32999B1217171E1700A8D055 /* logo@2x.png in Resources */,
 				32999B1417171FEA00A8D055 /* Default.png in Resources */,
 				32999B1617171FF500A8D055 /* Default@2x.png in Resources */,
@@ -403,6 +415,10 @@
 				3253B1BE17146631005D7B0A /* WOTDScroller.m in Sources */,
 				32999B071716E0C300A8D055 /* HCContainer.m in Sources */,
 				32999B0A1717036400A8D055 /* SearchController.m in Sources */,
+				3283860717200827007C3780 /* HCWords.m in Sources */,
+				3283860D17200854007C3780 /* HCVerbs.m in Sources */,
+				3283861017200899007C3780 /* HCTranslations.m in Sources */,
+				32838613172008B3007C3780 /* HCNouns.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
