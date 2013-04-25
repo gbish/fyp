@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class WordsOfTheDayController;
+
+@protocol WordsOfTheDayViewDelegate <NSObject>
+
+@optional
+- (void)controller:(WordsOfTheDayController *)controller didSelectWord:(NSString *)word;
+
+@end
+
 @interface WordsOfTheDayController : UIViewController
+
+@property (nonatomic, weak) id <WordsOfTheDayViewDelegate> delegate;
 
 @end

@@ -12,9 +12,17 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DefinitionViewController.h"
 
+@interface WOTDScroller ()
+{
+    DefinitionViewController *defController;
+}
+
+@end
+
 @implementation WOTDScroller
 
 @synthesize scroller;
+@synthesize wotdView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -28,6 +36,9 @@
 
 - (void)fillScrollView:(NSArray *)arrayData scrollViewHeight:(float)height
 {
+    wotdView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.bounds.size.width, self.bounds.size.height - 60.0f)];
+    [self addSubview:wotdView];
+    
     scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.bounds.size.width, height)];
     scroller.delegate = self;
     [scroller setPagingEnabled:YES];
@@ -79,7 +90,7 @@
     
     CGSize newScrollViewContentSize = CGSizeMake(scroller.bounds.size.width * arrayData.count, height);
     [scroller setContentSize:newScrollViewContentSize];
-    [self addSubview:scroller];
+    [wotdView addSubview:scroller];
     
     self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0.0f, height, self.bounds.size.width, 16.0f)];
     self.pageControl.numberOfPages = arrayData.count;
@@ -89,14 +100,18 @@
     
     [self.pageControl addTarget:self action:@selector(pageChanged:) forControlEvents:UIControlEventValueChanged];
     
-    [self addSubview:self.pageControl];
+    [wotdView addSubview:self.pageControl];
 }
 
-- (void)loadWord:(NSString *)word
+- (void)loadWord:(UITapGestureRecognizer *)tapGestureRecognizer
 {
-    NSLog(@"Tapped on the label");
+    UILabel *current = (UILabel *)tapGestureRecognizer.view;
     
-//    DefinitionViewController *defController = [[DefinitionViewController alloc] initWithNibName:nil bundle:nil];
+    if ([self.delegate respondsToSelector:@selector(scroller:didSelectWord:)]) {
+        [self.delegate scroller:self didSelectWord:current.text];
+    }
+    
+//    NSLog(@"%@", current.text);
 }
 
 /*

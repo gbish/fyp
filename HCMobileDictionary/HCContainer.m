@@ -12,7 +12,7 @@
 #import "SearchController.h"
 #import "DefinitionViewController.h"
 
-@interface HCContainer () <UITextFieldDelegate, UIScrollViewDelegate>
+@interface HCContainer () <UITextFieldDelegate, UIScrollViewDelegate, WordsOfTheDayViewDelegate>
 {
     WordsOfTheDayController *wotdsController;
     SearchController *searchController;
@@ -46,6 +46,7 @@
 //    UIViewController *wotd = [[UIViewController alloc] init];
     
     wotdsController = [[WordsOfTheDayController alloc] initWithNibName:nil bundle:nil];
+    wotdsController.delegate = self;
     searchController = [[SearchController alloc] initWithNibName:nil bundle:nil];
     definitionController = [[DefinitionViewController alloc] initWithNibName:nil bundle:nil];
     
@@ -80,6 +81,14 @@
     wotdsController.view.frame = viewArea;
     searchController.view.frame = viewArea;
     definitionController.view.frame = viewArea;
+}
+
+
+- (void)controller:(WordsOfTheDayController *)controller didSelectWord:(NSString *)word {
+    omniBar.text = word.lowercaseString;
+    [wotdsController.view setHidden:YES];
+    [definitionController.view setHidden:NO];
+    [definitionController loadDefinitionView:word];
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,7 +139,6 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"Field returned");
     [textField resignFirstResponder];
-//    [self loadDefinitionView:textField.text];
     [searchController.view setHidden:YES];
     [searchController.searchTableView setHidden:YES];
     [definitionController.view setHidden:NO];

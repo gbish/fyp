@@ -23,6 +23,7 @@
 @implementation SearchController
 
 @synthesize searchTableView;
+@synthesize typeFlag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +54,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(textFieldDidChange:)
                                                  name:UITextFieldTextDidChangeNotification object:container.omniBar];
+    
+    typeFlag = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,9 +75,18 @@
         
         NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
                                                     cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                timeoutInterval:60.0];
+                                                timeoutInterval:10.0];
         
         [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+            if (error) {
+                if (!typeFlag) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"Check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                    typeFlag = YES;
+                }
+                return;
+            }
+            
             JSONData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             [searchTableView reloadData];
             NSLog(@"%@", JSONData);
@@ -118,6 +130,7 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"Field returned");
+    NSLog(@"%@", textField.text);
     [textField resignFirstResponder];
 //    [self loadDefinitionView:textField.text];
     [searchTableView setHidden:YES];

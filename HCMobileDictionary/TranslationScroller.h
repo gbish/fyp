@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 com.othermedia. All rights reserved.
 //
 
-#import "Scrollers.h"
+#import "Scroller.h"
 
-@interface ObjectScrollers : Scrollers
+@interface TranslationScroller : Scroller
 
-@property (nonatomic) UIScrollView *scroller;
-@property (nonatomic) UIPageControl *pageControl;
+//@property (nonatomic) UIScrollView *scroller;
+//@property (nonatomic) UIPageControl *pageControl;
 
 - (void)fillScrollView:(NSArray *)arrayData scrollViewHeight:(float)height;
 

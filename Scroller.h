@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Scrollers : UIView <UIScrollViewDelegate>
+@interface Scroller : UIView <UIScrollViewDelegate>
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) UIScrollView *scroller;

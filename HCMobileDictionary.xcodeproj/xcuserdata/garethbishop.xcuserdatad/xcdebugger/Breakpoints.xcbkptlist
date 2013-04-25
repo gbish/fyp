@@ -4,29 +4,68 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HCMobileDictionary/ObjectScrollers.m"
-         timestampString = "387982392.297061"
+         filePath = "../EmptyTest/EmptyTest/DefinitionViewController.m"
+         timestampString = "388427772.155376"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "-fillScrollView:scrollViewHeight:"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
+         landmarkName = "-loadDefinitionView:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Scrollers.m"
+         timestampString = "388425826.756001"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
+         landmarkName = "-pageChanged:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HCMobileDictionary/ObjectScrollers.m"
-         timestampString = "387982392.297061"
+         filePath = "HCMobileDictionary/HCContainer.m"
+         timestampString = "388432419.720161"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
-         landmarkName = "-fillScrollView:scrollViewHeight:"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
+         landmarkName = "-controller:didSelectWord:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HCMobileDictionary/WordsOfTheDayController.m"
+         timestampString = "388431526.432015"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
+         landmarkName = "-scroller:didSelectWord:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HCMobileDictionary/WOTDScroller.m"
+         timestampString = "388431588.671357"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
+         landmarkName = "-loadWord:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

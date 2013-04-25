@@ -9,8 +9,9 @@
 #import "WordsOfTheDayController.h"
 #import "WOTDScroller.h"
 
-@interface WordsOfTheDayController () <NSURLConnectionDataDelegate> {
+@interface WordsOfTheDayController () <NSURLConnectionDataDelegate, WOTDScrollerDelegate> {
     NSMutableData *receivedData;
+    WOTDScroller *wotds;
 }
 
 @end
@@ -36,7 +37,9 @@
     
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:wordsOfTheDayURL]
                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                            timeoutInterval:60.0];
+                                            timeoutInterval:15.0];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
 
@@ -45,17 +48,31 @@
             NSLog(@"Connection Failed! - %@ %@",
                   [error localizedDescription],
                   [[error userInfo] objectForKey:NSURLErrorFailingURLErrorKey]);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"Check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             
             return;
         }
         
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         // Perform a JSON Serialisation on the received JSON data
         NSArray *wotdJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        WOTDScroller *wotds = [[WOTDScroller alloc] initWithFrame:CGRectMake(0.0f, 45.0f, self.view.frame.size.width, self.view.frame.size.height)];
+        wotds = [[WOTDScroller alloc] initWithFrame:CGRectMake(0.0f, 45.0f, self.view.frame.size.width, self.view.frame.size.height)];
+        wotds.delegate = self;
         [self.view addSubview:wotds];
         [wotds fillScrollView:wotdJSON scrollViewHeight:300.0f];
     }];
+}
+
+
+- (void)scroller:(WOTDScroller *)scroller didSelectWord:(NSString *)word {
+    
+    if ([self.delegate respondsToSelector:@selector(controller:didSelectWord:)]) {
+        [self.delegate controller:self didSelectWord:word];
+    }
 }
 
 - (void)didReceiveMemoryWarning

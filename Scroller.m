@@ -6,20 +6,17 @@
 //  Copyright (c) 2013 com.othermedia. All rights reserved.
 //
 
-#import "Scrollers.h"
+#import "Scroller.h"
 #import "PaddedUILabel.h"
 #import "UIColor_Categories.h"
 #import <QuartzCore/QuartzCore.h>
 #import "HCNouns.h"
 #import "HCVerbs.h"
 
-@interface Scrollers () {
-    UIScrollView *scroller;
-}
-
+@interface Scroller ()
 @end
 
-@implementation Scrollers
+@implementation Scroller
 
 @synthesize title;
 @synthesize scroller;
@@ -31,6 +28,16 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"section_bg.png"]];
+        
+        self.scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 20.0f, self.bounds.size.width, 100.0f)];
+        self.scroller.delegate = self;
+        [self.scroller setPagingEnabled:YES];
+        [self.scroller setShowsHorizontalScrollIndicator:NO];
+        
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0.0f, 125.0f, self.bounds.size.width, 16.0f)];
+        self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+        self.pageControl.currentPageIndicatorTintColor = [UIColor darkGrayColor];
+        self.pageControl.currentPage = 0;
     }
     return self;
 }
@@ -48,17 +55,13 @@
 
 - (void)fillScrollView:(NSArray *)arrayData scrollViewHeight:(float)height
 {
-    scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 20.0f, self.bounds.size.width, height)];
-    scroller.delegate = self;
-    [scroller setPagingEnabled:YES];
-    CGSize scrollViewContentSize = scroller.bounds.size;
-    [scroller setContentSize:scrollViewContentSize];
-    [scroller setShowsHorizontalScrollIndicator:NO];
+    CGSize scrollViewContentSize = self.scroller.bounds.size;
+    [self.scroller setContentSize:scrollViewContentSize];    
     
     int i = 0;
     
     for (NSManagedObject *def in arrayData) {
-        PaddedUILabel *definitionLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * scroller.bounds.size.width + 5.0f, 0.0f, scroller.bounds.size.width - 10.0f, 100.0f)];
+        PaddedUILabel *definitionLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * self.scroller.bounds.size.width + 5.0f, 0.0f, self.scroller.bounds.size.width - 10.0f, 100.0f)];
         definitionLabel.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
         definitionLabel.numberOfLines = 0;
         definitionLabel.layer.cornerRadius = 8;
@@ -71,37 +74,18 @@
         }
         [definitionLabel setFont:[UIFont fontWithName:@"Times" size:14.0]];
         definitionLabel.textColor = [UIColor colorWithHexString:@"#333333"];
-        [scroller addSubview:definitionLabel];
+        [self.scroller addSubview:definitionLabel];
         i++;
     }
     
-//    for (int i = 0; i < arrayData.count; i++) {
-//        PaddedUILabel *definitionLabel = [[PaddedUILabel alloc] initWithFrame:CGRectMake(i * scroller.bounds.size.width + 5.0f, 0.0f, scroller.bounds.size.width - 10.0f, 100.0f)];
-//        definitionLabel.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
-//        definitionLabel.numberOfLines = 0;
-//        definitionLabel.layer.cornerRadius = 8;
-//        definitionLabel.layer.borderColor = [UIColor colorWithHexString:@"#cccccc"].CGColor;
-//        definitionLabel.layer.borderWidth = 2;
-//        [definitionLabel setText:arrayData[i]];
-//        [definitionLabel setFont:[UIFont fontWithName:@"Times" size:14.0]];
-//        definitionLabel.textColor = [UIColor colorWithHexString:@"#333333"];
-//        [scroller addSubview:definitionLabel];
-//        i++;
-//    }
+    CGSize newScrollViewContentSize = CGSizeMake(self.scroller.bounds.size.width * arrayData.count, 100.0f);
+    [self.scroller setContentSize:newScrollViewContentSize];
     
-    CGSize newScrollViewContentSize = CGSizeMake(scroller.bounds.size.width * arrayData.count, 100.0f);
-    [scroller setContentSize:newScrollViewContentSize];
-    [self addSubview:scroller];
+    self.pageControl.numberOfPages = arrayData.count;
+    [self.pageControl addTarget:self action:@selector(pageChanged:) forControlEvents:UIControlEventValueChanged];
     
-    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0.0f, 125.0f, self.bounds.size.width, 16.0f)];
-    pageControl.numberOfPages = arrayData.count;
-    pageControl.currentPage = 0;
-    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor darkGrayColor];
-    
-    [pageControl addTarget:self action:@selector(pageChanged:) forControlEvents:UIControlEventValueChanged];
-    
-    [self addSubview:pageControl];
+    [self addSubview:self.scroller];
+    [self addSubview:self.pageControl];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
@@ -114,12 +98,11 @@
 
 - (void)pageChanged:(UIPageControl *)control
 {
-    int page = pageControl.currentPage + 1;
-    CGRect frame = scroller.frame;
+    int page = self.pageControl.currentPage;
+    CGRect frame = self.scroller.frame;
     frame.origin.x = frame.size.width * page;
     NSLog(@"%f", self.bounds.size.width * page);
-//    NSLog(@"Page: %d Frame: %f", page, width);
-    [scroller scrollRectToVisible:CGRectMake(320.0f * page, 0.0f, self.bounds.size.width, 100.0f) animated:YES];
+    [self.scroller scrollRectToVisible:CGRectMake(320.0f * page, 0.0f, self.bounds.size.width, 100.0f) animated:YES];
 }
 
 /*

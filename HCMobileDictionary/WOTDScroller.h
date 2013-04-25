@@ -6,9 +6,22 @@
 //  Copyright (c) 2013 com.othermedia. All rights reserved.
 //
 
-#import "Scrollers.h"
+#import "Scroller.h"
 
-@interface WOTDScroller : Scrollers
+@class WOTDScroller;
+
+@protocol WOTDScrollerDelegate <NSObject>
+
+@optional
+- (void)scroller:(WOTDScroller *)scroller didSelectWord:(NSString *)word;
+
+@end
+
+@interface WOTDScroller : Scroller
+
+@property (nonatomic, weak) id <WOTDScrollerDelegate> delegate;
+
+@property (nonatomic) UIView *wotdView;
 
 @property (nonatomic) UIScrollView *scroller;
 

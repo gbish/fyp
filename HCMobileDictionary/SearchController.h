@@ -11,5 +11,6 @@
 @interface SearchController : UIViewController
 
 @property (nonatomic) UITableView *searchTableView;
+@property (nonatomic) BOOL typeFlag;
 
 @end
